@@ -1,18 +1,19 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { Page } from "../../constants"
-import { InitialStateType } from "../states"
+import { FeatureKey } from "../featureKey"
+import { RootState } from "../reducers"
 
-//---------------------------------------------------
-// Payload
-//---------------------------------------------------
-export type PagePayloadType = {
+/**
+ * Payload
+ */
+export type PagePayload = {
   id: number
 }
 
-//---------------------------------------------------
-// State
-//---------------------------------------------------
-export type PageStateType = {
+/**
+ * State
+ */
+export type PageState = {
   id: number
   pageTitle: string
   pageDescription: string
@@ -20,7 +21,7 @@ export type PageStateType = {
   metaDescription: string
 }
 
-const initialState: PageStateType = {
+const initialState: PageState = {
   id: Page.TOP.id,
   pageTitle: Page.TOP.pageTitle,
   pageDescription: Page.TOP.pageDescription,
@@ -28,17 +29,18 @@ const initialState: PageStateType = {
   metaDescription: Page.TOP.metaDescription,
 }
 
-//---------------------------------------------------
-// Slice
-//---------------------------------------------------
+/**
+ * Slice
+ * @see https://redux-toolkit.js.org/api/createslice
+ */
 const slice = createSlice({
-  name: "page",
+  name: FeatureKey.PAGE,
   initialState,
   reducers: {
     changePage: (
-      state: PageStateType,
-      action: PayloadAction<PagePayloadType>
-    ): PageStateType => {
+      state: PageState,
+      action: PayloadAction<PagePayload>
+    ): PageState => {
       const { id } = action.payload
       const selectedPage: Page = Page.of(id)
       return {
@@ -53,18 +55,18 @@ const slice = createSlice({
   },
 })
 
-//---------------------------------------------------
-// Reducer
-//---------------------------------------------------
+/**
+ * Reducer
+ */
 export const pageReducer = slice.reducer
 
-//---------------------------------------------------
-// Action
-//---------------------------------------------------
+/**
+ * Action
+ */
 export const { changePage } = slice.actions
 
-//---------------------------------------------------
-// Selector
-//---------------------------------------------------
-export const pageSelector = (state: InitialStateType): PageStateType =>
-  state.page
+/**
+ * Selector
+ * @param state PageStateType
+ */
+export const pageSelector = (state: RootState): PageState => state.page

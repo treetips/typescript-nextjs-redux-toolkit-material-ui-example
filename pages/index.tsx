@@ -36,7 +36,7 @@ function Index(props: Props) {
 }
 
 /**
- * Server side rendering
+ * @see https://nextjs.org/docs/api-reference/data-fetching/getInitialProps
  */
 Index.getInitialProps = async (ctx: AppContext): Promise<Props> => {
   const { store } = ctx

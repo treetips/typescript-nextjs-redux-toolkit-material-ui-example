@@ -5,22 +5,17 @@ import {
 } from "@reduxjs/toolkit"
 import { MakeStore } from "next-redux-wrapper"
 import { Env } from "../constants"
-import { combinedReducers } from "./reducers"
-import { InitialStateType } from "./states"
+import { rootReducer, RootState } from "./reducers"
 
 /**
- * Create redux store
- * @see https://redux-toolkit.js.org/api/configureStore#full-example
+ * @see https://redux-toolkit.js.org/usage/usage-with-typescript#correct-typings-for-the-dispatch-type
  */
-export const makeStore: MakeStore = (
-  initialState?: InitialStateType
-): EnhancedStore => {
-  const middlewares = [...getDefaultMiddleware()]
-  const store = configureStore({
-    reducer: combinedReducers,
-    middleware: middlewares,
-    devTools: Env.NODE_ENV === "development",
-    preloadedState: initialState,
-  })
-  return store
-}
+const middlewares = [...getDefaultMiddleware<RootState>()]
+
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: middlewares,
+  devTools: Env.NODE_ENV === "development",
+})
+
+export const makeStore: MakeStore = (_?: RootState): EnhancedStore => store

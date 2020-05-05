@@ -2,9 +2,13 @@
 
 This is a sample for `server-side rendering` using `TypeScript` , `Next.js` , `Redux Toolkit` , and `Material-UI` .
 
+I also used the latest features such as `createSlice` , `createAsyncThunk` , and `createEntityAdapter` .
+
 `VSCode` , `prettier` and `TSLint` provide real-time formatting, syntax checking and organizing of unused imports.
 
 これは、 `TypeScript` , `Next.js` , `Redux Toolkit` , `Material-UI` を使った `サーバーサイドレンダリング` に対応したサンプルです。
+
+`createSlice` ・ `createAsyncThunk` ・ `createEntityAdapter` といった最新機能も使ってみました。
 
 `VSCode` と `prettier` と `TSLint` によって、リアルタイムに整形と構文チェックと未使用 import の整理が行われます。
 
@@ -18,8 +22,14 @@ This is a sample for `server-side rendering` using `TypeScript` , `Next.js` , `R
 - [Typescript](https://www.typescriptlang.org/)
 - [Next.js](https://nextjs.org/)
 - [Material-UI](https://material-ui.com/)
+- [material-table](https://material-table.com/#/)
 - [Redux](https://redux.js.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
+    - [createSlice](https://redux-toolkit.js.org/api/createSlice)
+    - [createAsyncThunk](https://redux-toolkit.js.org/api/createAsyncThunk)
+    - [createEntityAdapter](https://redux-toolkit.js.org/api/createEntityAdapter)
+    - [createSelector](https://redux-toolkit.js.org/api/createSelector)
+    - It using most of the major features of the redux toolkit !!
 - [TSLint](https://palantir.github.io/tslint/)
 
 ## Requirement

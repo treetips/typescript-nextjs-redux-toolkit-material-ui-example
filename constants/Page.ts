@@ -1,5 +1,5 @@
 import { Color } from "@material-ui/core"
-import { blue, pink, red } from "@material-ui/core/colors"
+import { blue, pink, red, yellow } from "@material-ui/core/colors"
 import { SvgIconProps } from "@material-ui/core/SvgIcon"
 import { Home, Info, Save } from "@material-ui/icons"
 import { IEnum } from "."
@@ -33,6 +33,16 @@ export class Page implements IEnum<Page> {
     "/redux",
     Save,
     blue
+  )
+  public static readonly TODO = new Page(
+    3,
+    "TODO",
+    "TODO sample",
+    "TODO sample | sample",
+    "The TODO sample application using createAsyncThunk and createEntityAdapter.",
+    "/todo",
+    Save,
+    yellow
   )
   public static readonly ERROR = new Page(
     99,
