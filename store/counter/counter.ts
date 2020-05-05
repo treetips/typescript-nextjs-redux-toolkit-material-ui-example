@@ -1,47 +1,49 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { InitialStateType } from "../states"
+import { FeatureKey } from "../featureKey"
+import { RootState } from "../reducers"
 
-//---------------------------------------------------
-// Payload
-//---------------------------------------------------
-export type CounterPayloadType = {
+/**
+ * Payload
+ */
+export type CounterPayload = {
   inputNumber: number
 }
 
-//---------------------------------------------------
-// State
-//---------------------------------------------------
-export type CounterStateType = {
+/**
+ * State
+ */
+export type CounterState = {
   count: number
 }
 
-const initialState: CounterStateType = {
+const initialState: CounterState = {
   count: 1,
 }
 
-//---------------------------------------------------
-// Slice
-//---------------------------------------------------
+/**
+ * Slice
+ * @see https://redux-toolkit.js.org/api/createslice
+ */
 const slice = createSlice({
-  name: "counter",
+  name: FeatureKey.COUNTER,
   initialState,
   reducers: {
-    increment: (state: CounterStateType): CounterStateType => {
+    increment: (state: CounterState): CounterState => {
       return {
         ...state,
         count: state.count + 1,
       }
     },
-    decrement: (state: CounterStateType): CounterStateType => {
+    decrement: (state: CounterState): CounterState => {
       return {
         ...state,
         count: state.count - 1,
       }
     },
     calculate: (
-      state: CounterStateType,
-      action: PayloadAction<CounterPayloadType>
-    ): CounterStateType => {
+      state: CounterState,
+      action: PayloadAction<CounterPayload>
+    ): CounterState => {
       const { payload } = action
       return {
         ...state,
@@ -51,18 +53,18 @@ const slice = createSlice({
   },
 })
 
-//---------------------------------------------------
-// Reducer
-//---------------------------------------------------
+/**
+ * Reducer
+ */
 export const counterReducer = slice.reducer
 
-//---------------------------------------------------
-// Action
-//---------------------------------------------------
+/**
+ * Action
+ */
 export const { increment, decrement, calculate } = slice.actions
 
-//---------------------------------------------------
-// Selector
-//---------------------------------------------------
-export const counterSelector = (state: InitialStateType): CounterStateType =>
-  state.counter
+/**
+ * Selector
+ * @param state CounterState
+ */
+export const counterSelector = (state: RootState): CounterState => state.counter

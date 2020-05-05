@@ -103,7 +103,7 @@ function Redux(props: Props) {
 }
 
 /**
- * Server side rendering
+ * @see https://nextjs.org/docs/api-reference/data-fetching/getInitialProps
  */
 Redux.getInitialProps = async (ctx: AppContext): Promise<Props> => {
   const { store } = ctx
