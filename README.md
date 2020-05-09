@@ -4,13 +4,13 @@ This is a sample for `server-side rendering` using `TypeScript` , `Next.js` , `R
 
 I also used the latest features such as `createSlice` , `createAsyncThunk` , and `createEntityAdapter` .
 
-`VSCode` , `prettier` and `TSLint` provide real-time formatting, syntax checking and organizing of unused imports.
+`VSCode` , `prettier` and `ESLint` provide real-time formatting, syntax checking and organizing of unused imports.
 
 これは、 `TypeScript` , `Next.js` , `Redux Toolkit` , `Material-UI` を使った `サーバーサイドレンダリング` に対応したサンプルです。
 
 `createSlice` ・ `createAsyncThunk` ・ `createEntityAdapter` といった最新機能も使ってみました。
 
-`VSCode` と `prettier` と `TSLint` によって、リアルタイムに整形と構文チェックと未使用 import の整理が行われます。
+`VSCode` と `prettier` と `ESLint` によって、リアルタイムに整形と構文チェックと未使用 import の整理が行われます。
 
 ## Live demo
 
@@ -30,7 +30,7 @@ I also used the latest features such as `createSlice` , `createAsyncThunk` , and
     - [createEntityAdapter](https://redux-toolkit.js.org/api/createEntityAdapter)
     - [createSelector](https://redux-toolkit.js.org/api/createSelector)
     - It using most of the major features of the redux toolkit !!
-- [TSLint](https://palantir.github.io/tslint/)
+- [ESLint](https://eslint.org/)
 
 ## Requirement
 
@@ -46,7 +46,7 @@ I also used the latest features such as `createSlice` , `createAsyncThunk` , and
 
 - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ## Usage
 
