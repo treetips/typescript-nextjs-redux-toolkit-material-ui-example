@@ -1,7 +1,7 @@
 import { Todo } from "./Todo"
 
 // test data
-export let testTodos: Todo[] = []
+export const testTodos: Todo[] = []
 
 for (let i = 0; i < 6; i++) {
   testTodos.push({
