@@ -18,4 +18,4 @@ const store = configureStore({
   devTools: Env.NODE_ENV === "development",
 })
 
-export const makeStore: MakeStore = (): EnhancedStore => store
+export const makeStore: MakeStore = (_?: RootState): EnhancedStore => store

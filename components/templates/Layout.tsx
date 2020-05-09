@@ -1,6 +1,6 @@
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles"
 import Head from "next/head"
-import * as React from "react"
+import React from "react"
 import { usePage } from "../../hooks"
 import { ResponsiveDrawer } from "../organisms"
 
