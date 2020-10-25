@@ -46,6 +46,7 @@ export const TodoList = function (props: Props) {
       options={{
         actionsColumnIndex: 99,
         search: true,
+        draggable: false,
       }}
       data={todos}
       isLoading={isFetching}

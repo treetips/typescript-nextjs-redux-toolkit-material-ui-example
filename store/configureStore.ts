@@ -3,7 +3,7 @@ import {
   EnhancedStore,
   getDefaultMiddleware,
 } from "@reduxjs/toolkit"
-import { MakeStore } from "next-redux-wrapper"
+import { Context, createWrapper, MakeStore } from "next-redux-wrapper"
 import { Env } from "../constants"
 import { rootReducer, RootState } from "./reducers"
 
@@ -18,4 +18,7 @@ const store = configureStore({
   devTools: Env.NODE_ENV === "development",
 })
 
-export const makeStore: MakeStore = (_?: RootState): EnhancedStore => store
+export const makeStore: MakeStore<RootState> = (_?: Context): EnhancedStore =>
+  store
+
+export const wrapper = createWrapper<RootState>(makeStore, { debug: false })

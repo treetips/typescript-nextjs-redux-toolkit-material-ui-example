@@ -1,42 +1,54 @@
 {
   "files.exclude": {
     "**/.DS_Store": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    ".idea": true
   },
   "search.exclude": {
     "**/node_modules": true,
-    ".next": true
+    ".next": true,
+    ".idea": true
   },
   "files.insertFinalNewline": true,
   "javascript.format.enable": false,
-  "eslint.enable": true,
   "eslint.format.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     }
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     }
   },
   "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     }
   },
   "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
   }
 }

@@ -2,6 +2,7 @@ const path = require("path")
 const Dotenv = require("dotenv-webpack")
 
 module.exports = {
+  reactStrictMode: true,
   webpack: (config) => {
     config.plugins = [
       ...config.plugins,
